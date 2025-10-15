@@ -1,0 +1,50 @@
+.carousel-slide {
+  height: 100vh;
+  width: 100%;
+  color: #fff;
+  line-height: 160px;
+  text-align: center;
+  background: #364d79;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.shape {
+  clip-path: polygon(0 0, 100% 0, 100% 76%, 89% 100%, 0 100%);
+}
+.shape_two {
+  clip-path: polygon(0 14%, 16% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/* Desktop styles */
+@media (min-width: 769px) {
+  .carousel-slide {
+    height: 100vh;
+  }
+
+  .carousel-image {
+    height: 700px;
+  }
+  .shape {
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 90% 100%, 0 100%);
+  }
+  .shape_two {
+    clip-path: polygon(0 25%, 9% 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@keyframes zoomInSmooth {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+.animate-zoom-in {
+  animation: zoomInSmooth 5s ease-in-out forwards;
+}
