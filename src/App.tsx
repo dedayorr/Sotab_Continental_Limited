@@ -92,71 +92,51 @@ function App() {
         </div>
       </div>
       {navOpen && (
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.6, ease: "easeOut" }}
-          className="p-5 flex justify-center sidebar bg-black h-screen absolute top-0 w-full z-50"
-        >
-          <div title="Animated Card" className="">
-            <div className="flex justify-between px-[5%] py-[5%]">
-              <a href="/">
-                {" "}
-                <img className="w-[40%]" src="/logo2.png" alt="logo" />{" "}
-              </a>
-              <CloseCircleOutlined
-                onClick={closeSideBAr}
-                className="text-white text-[35px]"
-              />
-            </div>
-            {/* <div className=""> */}
-            <ul className="mt-[10%] text-white w-[90%] mx-auto flex flex-col gap-[60px]">
-              <li
-                onClick={closeSideBAr}
-                className=" flex items-center text-[24px] gap-[5%] "
-              >
-                <HomeOutlined className="text-[#3C467B]" />
-                <a href="#about">Home</a>
-              </li>
-              <li
-                onClick={closeSideBAr}
-                className="flex items-center text-[24px] gap-[5%] "
-              >
-                <BookOutlined className="text-[#3C467B]" />
-
-                <a href="#services"> About</a>
-              </li>
-              <li
-                onClick={closeSideBAr}
-                className="flex items-center text-[24px] gap-[5%] "
-              >
-                <PropertySafetyOutlined className="text-[#3C467B]" />
-                <a href="#faq">Property</a>
-              </li>
-              <li
-                onClick={closeSideBAr}
-                className="flex items-center text-[24px] gap-[5%] "
-              >
-                <MdOutlineMiscellaneousServices className="text-[#3C467B]" />
-                <a href="#faq">Services</a>
-              </li>
-              <li
-                onClick={closeSideBAr}
-                className="flex items-center text-[24px] gap-[5%] "
-              >
-                <GrGallery className="text-[#3C467B]" />
-                <a href="#faq">Gallery</a>
-              </li>
-              <li
-                onClick={closeSideBAr}
-                className="flex items-center text-[24px] gap-[5%] "
-              >
-                <PhoneOutlined className="text-[#3C467B]" />
-                <a href="#faq">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </motion.div>
+       <motion.div
+       initial={{ opacity: 0, y: 50 }}
+       animate={{ opacity: 1, y: 0 }}
+       transition={{ duration: 1.6, ease: "easeOut" }}
+       className="p-5 flex flex-col justify-between bg-black h-screen fixed top-0 left-0 w-full z-50"
+     >
+       <div>
+         <div className="flex justify-between items-center px-[5%] py-[5%]">
+           <a href="/">
+             <img className="w-[120px]" src="/logo2.png" alt="logo" />
+           </a>
+           <CloseCircleOutlined
+             onClick={closeSideBAr}
+             className="text-white text-[35px]"
+           />
+         </div>
+     
+         <ul className="mt-[10%] text-white w-[90%] mx-auto flex flex-col gap-[40px]">
+           <li onClick={closeSideBAr} className="flex items-center text-[24px] gap-[10px]">
+             <HomeOutlined className="text-[#3C467B]" />
+             <a href="#about">Home</a>
+           </li>
+           <li onClick={closeSideBAr} className="flex items-center text-[24px] gap-[10px]">
+             <BookOutlined className="text-[#3C467B]" />
+             <a href="#services">About</a>
+           </li>
+           <li onClick={closeSideBAr} className="flex items-center text-[24px] gap-[10px]">
+             <PropertySafetyOutlined className="text-[#3C467B]" />
+             <a href="#faq">Property</a>
+           </li>
+           <li onClick={closeSideBAr} className="flex items-center text-[24px] gap-[10px]">
+             <MdOutlineMiscellaneousServices className="text-[#3C467B]" />
+             <a href="#faq">Services</a>
+           </li>
+           <li onClick={closeSideBAr} className="flex items-center text-[24px] gap-[10px]">
+             <GrGallery className="text-[#3C467B]" />
+             <a href="#faq">Gallery</a>
+           </li>
+           <li onClick={closeSideBAr} className="flex items-center text-[24px] gap-[10px]">
+             <PhoneOutlined className="text-[#3C467B]" />
+             <a href="#faq">Contact</a>
+           </li>
+         </ul>
+       </div>
+     </motion.div>
       )}
       <SectionOne />
       <AboutUs />
