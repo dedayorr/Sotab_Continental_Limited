@@ -1,8 +1,9 @@
 import Image from "next/image";
+import Hero from "./content/hero-section/Hero";
 
 export default function Home() {
   return (
-    <main className="">
+    <main className="text-white">
       {/* <Image
           className="dark:invert"
           src="/next.svg"
@@ -11,7 +12,7 @@ export default function Home() {
           height={20}
           priority
         /> */}
-      <div className="">SOTAB</div>
+      <Hero />
     </main>
   );
 }
