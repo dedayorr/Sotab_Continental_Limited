@@ -1,6 +1,6 @@
 /* @media (min-width: 767px) { */
 .Hero {
-  background-image: url("/public/Hero_One.jpeg");
+  background-image: url("/Hero_One.jpeg");
   height: 660px;
   width: 100%;
   background-size: cover;

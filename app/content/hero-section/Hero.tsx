@@ -1,30 +1,79 @@
-import React from "react";
-import styles from "./Hero.module.css";
+"use client";
 
-function Hero() {
+import { useEffect, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/effect-fade";
+
+export default function HeroCarousel() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null; // Prevent SSR hydration mismatch
+
+  const images = [
+    "/Hero_One.jpeg",
+    "/Hero_Two.jpeg",
+    "/Hero_Three.jpeg",
+    "/Hero_Four.jpeg",
+  ];
+
   return (
-    <div className={`${styles.Hero} `}>
-      <div className=" h-[660px] bg-black bg-opacity-40 py-[6%] text-white tracking-widest px-[5%] flex flex-col gap-5 md:py-0 lg:mt-0 lg:py-0 lg:gap-[25px]">
-        <h1
-          className={`pt-[25%] text-[37px] font-extrabold md:pt-[3%] md:text-[47px] lg:text-[70px] lg:w-[80%] lg:mx-auto lg:text-center lg:pt-[8%] `}
-        >
-          Refresh Your Life With{" "}
-          <span className="text-[#823ec9]">Sparkling Clean</span> Solution In
-          Your Space
+    <div className="relative w-full h-screen">
+      <Swiper
+        modules={[Navigation, Pagination, Autoplay, EffectFade]}
+        navigation
+        pagination={{ clickable: true }}
+        autoplay={{ delay: 5000, disableOnInteraction: false }}
+        // effect="fade"
+        loop
+        className="w-full h-full"
+      >
+        {images.map((img, i) => (
+          <SwiperSlide key={i}>
+            <div className="relative w-full h-full">
+              <img
+                src={img}
+                alt={`Hero ${i + 1}`}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-40" />
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+
+      <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-white px-4 pointer-events-none">
+        <h1 className="text-5xl md:text-7xl font-bold mb-4 text-center">
+          Your Hero Title
         </h1>
-        <p className="md:text-[24px] text-justify lg:text-center text-[#773bb8] bg-[#ffffffa0] p-[1%] lg:w-[80%] lg:mx-auto ">
-          Crafting a spotless legacy in your home or office is not just our
-          mission, it&apos;s our passion.
+        <p className="text-xl md:text-2xl mb-8 text-center max-w-2xl">
+          Your compelling subtitle or description goes here
         </p>
-        <button
-          //   onClick={openModal}
-          className="bg-[#823ec9] w-[60%] py-[4%] hover:bg-white hover:text-[#823ec9] md:text-[25px] md:w-[45%] lg:mx-auto lg:w-[25%] lg:py-[1%]"
-        >
-          Learn More...
+        <button className="bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors pointer-events-auto">
+          Get Started
         </button>
       </div>
+
+      <style jsx global>{`
+        .swiper-button-next,
+        .swiper-button-prev {
+          color: white !important;
+        }
+        .swiper-pagination-bullet {
+          background: white !important;
+          opacity: 0.5 !important;
+        }
+        .swiper-pagination-bullet-active {
+          opacity: 1 !important;
+        }
+      `}</style>
     </div>
   );
 }
-
-export default Hero;
