@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import styles from "./Hero.module.css";
 
 export default function HeroCarousel() {
+
   return (
     <div className={`${styles.Hero} relative`}>
       <div className="absolute inset-0 bg-black/50"></div>
