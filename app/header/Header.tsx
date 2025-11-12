@@ -29,7 +29,7 @@ function Header() {
   };
   return (
     <>
-      <div className="flex justify-between items-center bg-white h-[70px] md:h-20 px-[5%] lg:h-[90px]">
+      <div className="flex justify-between items-center bg-white h-[70px] md:h-20 px-[5%] lg:h-20">
         <Link href="/">
           {" "}
           <Image
@@ -50,7 +50,7 @@ function Header() {
         </div>
 
         {/* -=======Desktop Menu======== */}
-        <ul className=" hidden text-black md:flex md:gap-6 lg:gap-9 lg:text-[20px]">
+        <ul className=" hidden text-black md:flex md:gap-6 lg:gap-9 lg:text-[16px]">
           <li className="flex items-center ">
             <Link
               href="/pages/aboutUs"
