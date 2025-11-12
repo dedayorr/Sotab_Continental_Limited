@@ -1,8 +1,15 @@
 "use client";
 import { motion } from "framer-motion";
 import styles from "./Hero.module.css";
+import { ChevronDown } from "lucide-react";
 
 export default function HeroCarousel() {
+  const scrollToNextSection = () => {
+    window.scrollBy({
+      top: window.innerHeight,
+      behavior: 'smooth'
+    });
+  };
   return (
     <div className={`${styles.Hero} relative`}>
       <div className="absolute inset-0 bg-black/50"></div>
@@ -31,17 +38,27 @@ export default function HeroCarousel() {
         </motion.p>
 
         <motion.button
-          className="text-white px-8 py-4 rounded-lg text-lg w-[60%] md:w-[40%] lg:w-[20%] mx-auto font-semibold transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl"
-          style={{ backgroundColor: "#771933" }}
-          onMouseEnter={(e) =>
-            (e.currentTarget.style.backgroundColor = "#5a1326")
-          }
-          onMouseLeave={(e) =>
-            (e.currentTarget.style.backgroundColor = "#771933")
-          }
-        >
-          Learn More...
-        </motion.button>
+      onClick={scrollToNextSection}
+      className="text-white p-4 rounded-full mx-auto transition-all duration-300 transform hover:scale-110 shadow-xl hover:shadow-2xl"
+      style={{ backgroundColor: "#771933" }}
+      onMouseEnter={(e) =>
+        (e.currentTarget.style.backgroundColor = "#5a1326")
+      }
+      onMouseLeave={(e) =>
+        (e.currentTarget.style.backgroundColor = "#771933")
+      }
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: 0.3 }}
+      aria-label="Scroll down"
+    >
+      <motion.div
+        animate={{ y: [0, 8, 0] }}
+        transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+      >
+        <ChevronDown className="w-8 h-8" />
+      </motion.div>
+    </motion.button>
       </div>
     </div>
   );

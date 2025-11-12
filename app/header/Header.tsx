@@ -1,25 +1,34 @@
 "use client";
 import { CloseCircleOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
 import { motion } from "framer-motion";
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import {
   FaBlog,
   FaCogs,
-  FaFacebook,
+
   FaInfoCircle,
   FaInstagram,
   FaLinkedin,
 } from "react-icons/fa";
-import { RiTwitterXLine } from "react-icons/ri";
 import "./header.css";
 import Link from "next/link";
-import { FcAbout } from "react-icons/fc";
 import { FaCircleQuestion } from "react-icons/fa6";
 import { MdOutlineContactPhone } from "react-icons/md";
 
 function Header() {
   const [navOpen, setNavOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const openSideBar = () => {
     setNavOpen(true);
   };
@@ -29,7 +38,9 @@ function Header() {
   };
   return (
     <>
-      <div className="flex justify-between items-center bg-white h-[70px] md:h-20 px-[5%] lg:h-20">
+      <div className={`z-50 flex justify-between items-center bg-white h-[70px] md:h-20 px-[5%] lg:h-20 sticky top-0 transition-shadow duration-300 ${
+        scrolled ? 'shadow-lg' : ''
+      }`}>
         <Link href="/">
           {" "}
           <Image

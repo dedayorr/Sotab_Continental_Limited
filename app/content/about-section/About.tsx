@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import "./about.css";
 import { motion, Variants } from "framer-motion";
+import Link from "next/link";
 
 function About() {
   const slideIn: Variants = {
@@ -37,12 +38,12 @@ function About() {
           />
         </div>
         <div className="w-full lg:w-1/2 flex flex-col gap-5 lg:text-[20px] lg:gap-8 ">
-          <p className="leading-10">
+          <p className="leading-relaxed">
             At Sotab Continental Ltd, we believe business is more than
             transactions. It&apos;s about building communities, creating
             opportunities, and shaping a better future.
           </p>
-          <p className="leading-10">
+          <p className="leading-relaxed">
             Founded with a passion for progress, Sotab has grown into a trusted
             name in real estate and energy solutions across Nigeria and Africa.
             Our mission is simple: to transform ideas into meaningful projects
@@ -51,18 +52,23 @@ function About() {
         </div>
       </motion.div>
 
-      <motion.button
-              className="text-white px-8 py-4 rounded-lg text-lg w-[60%] md:w-[40%] lg:w-[20%] mx-auto font-semibold transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl"
-              style={{ backgroundColor: "#771933" }}
-              onMouseEnter={(e) =>
-                (e.currentTarget.style.backgroundColor = "#5a1326")
-              }
-              onMouseLeave={(e) =>
-                (e.currentTarget.style.backgroundColor = "#771933")
-              }
-            >
-            Learn More...
-            </motion.button>
+      <Link
+        href="/pages/aboutUs"
+        className="w-[60%] md:w-[40%] lg:w-[20%] mx-auto block"
+      >
+        <motion.button
+          className="text-white px-8 py-4 rounded-lg text-lg w-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl"
+          style={{ backgroundColor: "#771933" }}
+          onMouseEnter={(e) =>
+            (e.currentTarget.style.backgroundColor = "#5a1326")
+          }
+          onMouseLeave={(e) =>
+            (e.currentTarget.style.backgroundColor = "#771933")
+          }
+        >
+          Learn More...
+        </motion.button>
+      </Link>
     </motion.div>
   );
 }

@@ -1,6 +1,7 @@
 "use client";
-import React from "react";
 import { Home, Award, TrendingUp, Star } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 function LastSection() {
   return (
@@ -32,18 +33,20 @@ function LastSection() {
               step.
             </p>
 
-            <button
-              className="text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl"
-              style={{ backgroundColor: "#771933" }}
-              onMouseEnter={(e) =>
-                (e.currentTarget.style.backgroundColor = "#5a1326")
-              }
-              onMouseLeave={(e) =>
-                (e.currentTarget.style.backgroundColor = "#771933")
-              }
-            >
-              Contact Us
-            </button>
+            <Link href="/pages/contact-us">
+              <button
+                className="text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl"
+                style={{ backgroundColor: "#771933" }}
+                onMouseEnter={(e) =>
+                  (e.currentTarget.style.backgroundColor = "#5a1326")
+                }
+                onMouseLeave={(e) =>
+                  (e.currentTarget.style.backgroundColor = "#771933")
+                }
+              >
+                Contact Us
+              </button>
+            </Link>
           </div>
 
           <div className="relative">
@@ -72,27 +75,27 @@ function LastSection() {
                 </h2>
 
                 <div className="grid grid-cols-3 gap-3 pt-2">
-                  <div
-                    className="aspect-square rounded-lg shadow-md"
-                    style={{
-                      background:
-                        "linear-gradient(135deg, #1f3693 0%, #282b53 100%)",
-                    }}
-                  ></div>
-                  <div
-                    className="aspect-square rounded-lg shadow-md"
-                    style={{
-                      background:
-                        "linear-gradient(135deg, #771933 0%, #282b53 100%)",
-                    }}
-                  ></div>
-                  <div
-                    className="aspect-square rounded-lg shadow-md"
-                    style={{
-                      background:
-                        "linear-gradient(135deg, #282b53 0%, #1f3693 100%)",
-                    }}
-                  ></div>
+                  <Image
+                    src="/Hero_Five.jpeg"
+                    alt="sotabImage"
+                    width={500}
+                    height={500}
+                    className="object-cover w-full h-[200px] md:h-[300px] lg:h-[180px] rounded-lg shadow-md"
+                  />
+                  <Image
+                    src="/Hero_Six.jpeg"
+                    alt="sotabImage"
+                    width={500}
+                    height={500}
+                    className="object-cover w-full h-[200px] md:h-[300px] lg:h-[180px] rounded-lg shadow-md"
+                  />
+                  <Image
+                    src="/Hero_Seven.jpeg"
+                    alt="sotabImage"
+                    width={500}
+                    height={500}
+                    className="object-cover w-full h-[200px] md:h-[300px] lg:h-[180px] rounded-lg shadow-md"
+                  />
                 </div>
 
                 <div className="flex items-center justify-between pt-2">

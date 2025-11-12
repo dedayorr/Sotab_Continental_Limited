@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion, Variants } from "framer-motion";
+import Link from "next/link";
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -35,7 +36,7 @@ function Why() {
           <p className="font-bold text-[30px] text-[#f5f5f5]">WHY US</p>
           <hr className="border-[3px] border-[#282b53] w-[20%] lg:w-[10%] mt-2" />
 
-          <p className="lg:text-[20px] lg:leading-10 text-justify mt-5">
+          <p className="lg:text-[20px] leading-relaxed text-justify mt-5">
             We see enormous potential in Africa&apos;s real estate and energy
             sectors, and we&apos;re proud to be part of this exciting story of
             growth. For us, every project is a chance to create sustainable
@@ -43,7 +44,7 @@ function Why() {
             generations to come.
           </p>
 
-          <p className="lg:text-[20px] lg:leading-10 text-justify">
+          <p className="lg:text-[20px] leading-relaxed text-justify">
             The future at Sotab Continental Ltd is bold and full of
             possibilities. As we expand our reach, explore new technologies, and
             invest in people, our goal remains the same: to build a company that
@@ -66,18 +67,23 @@ function Why() {
         </motion.div>
       </div>
 
-      <motion.button
-        className="text-white px-8 py-4 rounded-lg text-lg w-[60%] md:w-[40%] lg:w-[20%] mx-auto font-semibold transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl"
-        style={{ backgroundColor: "#771933" }}
-        onMouseEnter={(e) =>
-          (e.currentTarget.style.backgroundColor = "#5a1326")
-        }
-        onMouseLeave={(e) =>
-          (e.currentTarget.style.backgroundColor = "#771933")
-        }
+      <Link
+        href="/pages/why-us"
+        className="w-[60%] md:w-[40%] lg:w-[20%] mx-auto block"
       >
-        Learn More...
-      </motion.button>
+        <motion.button
+          className="text-white px-8 py-4 rounded-lg text-lg w-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl"
+          style={{ backgroundColor: "#771933" }}
+          onMouseEnter={(e) =>
+            (e.currentTarget.style.backgroundColor = "#5a1326")
+          }
+          onMouseLeave={(e) =>
+            (e.currentTarget.style.backgroundColor = "#771933")
+          }
+        >
+          Learn More...
+        </motion.button>
+      </Link>
     </motion.div>
   );
 }

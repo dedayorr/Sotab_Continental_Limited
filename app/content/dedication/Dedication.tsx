@@ -14,12 +14,12 @@ const slideIn: Variants = {
 function Dedication() {
   const dedicationItems = [
     {
-      icon: <Lightbulb className="text-[#1f3693] w-12 h-12" />,
+      icon: <Lightbulb className="text-[#1f3693] w-12 h-12 leading-10" />,
       title: "Innovation",
       text: "We embrace bold ideas and forward-thinking solutions.",
     },
     {
-      icon: <ShieldCheck className="text-[#1f3693] w-12 h-12" />,
+      icon: <ShieldCheck className="text-[#1f3693] w-12 h-12 leading-10" />,
       title: "Integrity",
       text: "We believe in transparency, trust, and doing the right thing.",
     },
