@@ -28,14 +28,16 @@ function Service() {
       },
     },
   };
+//   zaimakprints
   return (
     <motion.div
-      className="grid grid-cols-2 gap-5 px-3 mt-[-15%] pb-[20%] md:mt-[-7%] md:gap-9 md:px-8 lg:grid-cols-4 lg:mt-[-4%] lg:px-[8%]"
+      className="grid grid-cols-2 gap-5 px-3 mt-[-15%] pb-[40%] md:mt-[-7%] md:gap-9 md:px-8 md:pb-[15%] lg:pb-[10%] lg:grid-cols-4 lg:mt-[-4%] lg:px-[8%]"
       variants={container}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.2 }}
     >
+   
       <motion.div
         variants={card}
         style={{ boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;" }}
@@ -65,6 +67,7 @@ function Service() {
         </p>
       </motion.div>
 
+     
       <motion.div
         variants={card}
         style={{ boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;" }}
