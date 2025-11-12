@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import styles from "./Hero.module.css";
 
 export default function HeroCarousel() {
-
   return (
     <div className={`${styles.Hero} relative`}>
       <div className="absolute inset-0 bg-black/50"></div>
@@ -32,10 +31,14 @@ export default function HeroCarousel() {
         </motion.p>
 
         <motion.button
-          className="bg-[#771933] w-[50%] py-[4%] hover:bg-white hover:text-[#1f3693] md:text-[25px] md:py-[2%] md:w-[35%] lg:mx-auto lg:w-[20%] lg:text-[20px] lg:py-[1%]"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1, duration: 1, ease: "easeOut" }}
+          className="text-white px-8 py-4 rounded-lg text-lg w-[60%] md:w-[40%] lg:w-[20%] mx-auto font-semibold transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl"
+          style={{ backgroundColor: "#771933" }}
+          onMouseEnter={(e) =>
+            (e.currentTarget.style.backgroundColor = "#5a1326")
+          }
+          onMouseLeave={(e) =>
+            (e.currentTarget.style.backgroundColor = "#771933")
+          }
         >
           Learn More...
         </motion.button>

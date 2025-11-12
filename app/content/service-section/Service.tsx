@@ -31,7 +31,7 @@ function Service() {
 //   zaimakprints
   return (
     <motion.div
-      className="grid grid-cols-2 gap-5 px-3 mt-[-15%] pb-[40%] md:mt-[-7%] md:gap-9 md:px-8 md:pb-[15%] lg:pb-[10%] lg:grid-cols-4 lg:mt-[-4%] lg:px-[8%]"
+      className="grid grid-cols-2 gap-5 px-3 mt-[-15%] pb-[40%] md:mt-[-7%] md:gap-9 md:px-8 md:pb-[15%] lg:pb-[10%] lg:grid-cols-4 lg:mt-[-3%] lg:px-[8%]"
       variants={container}
       initial="hidden"
       whileInView="show"
@@ -40,28 +40,28 @@ function Service() {
    
       <motion.div
         variants={card}
-        style={{ boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;" }}
+        style={{ boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}
         className="z-50 bg-white h-40 p-5 flex flex-col justify-center items-center text-[#282b53dc] rounded-md gap-[15px]"
       >
-        <GiReceiveMoney className="text-7xl" />
+        <GiReceiveMoney className="text-7xl lg:text-5xl" />
         <p className="md:text-2xl lg:text-xl">Buying services</p>
       </motion.div>
 
       <motion.div
         variants={card}
-        style={{ boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;" }}
+        style={{ boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}
         className="z-50 bg-white h-40 p-5 flex flex-col justify-center items-center text-[#282b53dc] rounded-md gap-[15px]"
       >
-        <BsCart4 className="text-7xl" />
+        <BsCart4 className="text-7xl lg:text-5xl" />
         <p className="md:text-2xl lg:text-xl">Selling services</p>
       </motion.div>
 
       <motion.div
         variants={card}
-        style={{ boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;" }}
+        style={{ boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}
         className="z-50 bg-white h-40 p-5 flex flex-col justify-center items-center text-[#282b53dc] rounded-md gap-[15px]"
       >
-        <FaBuilding className="text-6xl" />
+        <FaBuilding className="text-6xl lg:text-4xl" />
         <p className="text-center md:text-2xl lg:text-xl">
           Property management
         </p>
@@ -70,10 +70,10 @@ function Service() {
      
       <motion.div
         variants={card}
-        style={{ boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;" }}
+        style={{ boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}
         className="z-50 bg-white h-40 p-5 flex flex-col justify-center items-center text-[#282b53dc] rounded-md gap-[15px]"
       >
-        <GiCoins className="text-7xl" />
+        <GiCoins className="text-7xl lg:text-5xl" />
         <p className="text-center md:text-2xl lg:text-xl">
           Investment consulting
         </p>
