@@ -1,79 +1,44 @@
 "use client";
-
-import { useEffect, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/effect-fade";
+import { motion } from "framer-motion";
+import styles from "./Hero.module.css";
 
 export default function HeroCarousel() {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) return null; // Prevent SSR hydration mismatch
-
-  const images = [
-    "/Hero_One.jpeg",
-    "/Hero_Two.jpeg",
-    "/Hero_Three.jpeg",
-    "/Hero_Four.jpeg",
-  ];
-
   return (
-    <div className="relative w-full h-screen">
-      <Swiper
-        modules={[Navigation, Pagination, Autoplay, EffectFade]}
-        navigation
-        pagination={{ clickable: true }}
-        autoplay={{ delay: 5000, disableOnInteraction: false }}
-        // effect="fade"
-        loop
-        className="w-full h-full"
-      >
-        {images.map((img, i) => (
-          <SwiperSlide key={i}>
-            <div className="relative w-full h-full">
-              <img
-                src={img}
-                alt={`Hero ${i + 1}`}
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-black bg-opacity-40" />
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+    <div className={`${styles.Hero} relative`}>
+      <div className="absolute inset-0 bg-black/50"></div>
+      <div className="relative z-10 h-[660px] text-white tracking-widest px-[5%] flex flex-col gap-9 lg:gap-[60px]">
+        <motion.h1
+          className="text-[30px] pt-[25%] md:pt-[15%] md:text-[40px] lg:pt-[6%] lg:text-[45px] lg:w-[70%] lg:mx-auto lg:text-center"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+        >
+          Partner with{" "}
+          <span className="font-extrabold text-[#1f3693]">
+            SOTAB CONTINENTAL LIMITED
+          </span>{" "}
+          your trusted real estate partner
+        </motion.h1>
 
-      <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-white px-4 pointer-events-none">
-        <h1 className="text-5xl md:text-7xl font-bold mb-4 text-center">
-          Your Hero Title
-        </h1>
-        <p className="text-xl md:text-2xl mb-8 text-center max-w-2xl">
-          Your compelling subtitle or description goes here
-        </p>
-        <button className="bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors pointer-events-auto">
-          Get Started
-        </button>
+        <motion.p
+          className="md:text-[24px] lg:text-center text-[#1f3693] bg-[#ffffff71] p-[1%] lg:text-[20px] lg:w-[60%] lg:mx-auto"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 1, ease: "easeOut" }}
+        >
+          Property development, management, and investment opportunities across
+          the continent.
+        </motion.p>
+
+        <motion.button
+          className="bg-[#771933] w-[50%] py-[4%] hover:bg-white hover:text-[#1f3693] md:text-[25px] md:py-[2%] md:w-[40%] lg:mx-auto lg:w-[20%] lg:text-[20px] lg:py-[1%]"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1, duration: 1, ease: "easeOut" }}
+        >
+          Learn More...
+        </motion.button>
       </div>
-
-      <style jsx global>{`
-        .swiper-button-next,
-        .swiper-button-prev {
-          color: white !important;
-        }
-        .swiper-pagination-bullet {
-          background: white !important;
-          opacity: 0.5 !important;
-        }
-        .swiper-pagination-bullet-active {
-          opacity: 1 !important;
-        }
-      `}</style>
     </div>
   );
 }

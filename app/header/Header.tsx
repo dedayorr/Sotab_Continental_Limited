@@ -9,6 +9,7 @@ import {
   FaFacebook,
   FaInfoCircle,
   FaInstagram,
+  FaLinkedin,
 } from "react-icons/fa";
 import { RiTwitterXLine } from "react-icons/ri";
 import "./header.css";
@@ -92,9 +93,22 @@ function Header() {
           </li>
         </ul>
         <div className="items-center gap-5 hidden md:flex text-[25px] text-[#282b53]">
-          <FaInstagram />
-          <RiTwitterXLine />
-          <FaFacebook />
+          <a
+            href="https://www.instagram.com/sotab_continental_ltd?igsh=MWF5d3MwamYyN216ZQ=="
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaInstagram />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/sotab-realestate-limited-realestate-oil-and-gas-company-179931386?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaLinkedin />
+          </a>
+          {/* <RiTwitterXLine />
+          <FaFacebook /> */}
         </div>
       </div>
 
@@ -111,6 +125,7 @@ function Header() {
               <Link href="/">
                 {" "}
                 <Image
+                  onClick={closeSideBAr}
                   className=""
                   src="/menu_logo.JPG"
                   alt="Sotab logo"
