@@ -13,14 +13,14 @@ function Footer() {
           {/* Logo Section */}
           <div className="lg:col-span-1">
             <div className="mb-6">
-            <Image
-            className="SotabLogo"
-            src="/SotabLTD.PNG"
-            alt="Sotab logo"
-            width={100}
-            height={20}
-            priority
-          />
+              <Image
+                className="SotabLogo"
+                src="/SotabLTD.PNG"
+                alt="Sotab logo"
+                width={100}
+                height={20}
+                priority
+              />
             </div>
             <p className="text-blue-200 text-sm leading-relaxed">
               Your trusted partner in finding the perfect property.
@@ -48,10 +48,17 @@ function Footer() {
                 <div>
                   <div className="text-sm text-blue-200 mb-1">Phone</div>
                   <a
-                    href="tel:+2341234567890"
+                    href="tel:+2347047155693"
                     className="text-white hover:text-blue-300 transition-colors font-medium"
                   >
-                    +234 123 456 7890
+                    07047155693
+                  </a>
+                  <br />
+                  <a
+                    href="tel:+2348104542063"
+                    className="text-white hover:text-blue-300 transition-colors font-medium"
+                  >
+                    08104542063
                   </a>
                 </div>
               </div>
@@ -67,10 +74,10 @@ function Footer() {
                 <div>
                   <div className="text-sm text-blue-200 mb-1">Email</div>
                   <a
-                    href="mailto:info@sotabrealestate.com"
+                    href="mailto:info@sotabltd.com.ng"
                     className="text-white hover:text-blue-300 transition-colors font-medium break-all"
                   >
-                    info@sotabrealestate.com
+                    info@sotabltd.com.ng
                   </a>
                 </div>
               </div>
@@ -86,7 +93,7 @@ function Footer() {
                 <div>
                   <div className="text-sm text-blue-200 mb-1">Address</div>
                   <p className="text-white font-medium">
-                    123 Victoria Island,
+                  70b kusenla road, ikate
                     <br />
                     Lagos, Nigeria
                   </p>

@@ -1,4 +1,4 @@
-import React from "react";
+
 import {
   Shield,
   TrendingUp,
@@ -99,7 +99,7 @@ const WhyUs = () => {
       <div className="relative min-h-[250px] md:min-h-[300px] lg:min-h-[400px]">
         <div className="absolute inset-0 bg-linear-to-br from-gray-400 to-gray-600">
           <Image
-            src="/business.jpg"
+            src="/why_us.jpg"
             alt="sotabImage"
             width={1200}
             height={800}
@@ -110,7 +110,7 @@ const WhyUs = () => {
           className="absolute inset-0"
           style={{ backgroundColor: "rgba(40, 43, 83, 0.75)" }}
         />
-        <div className="relative z-10 h-full flex items-center justify-center px-6">
+        <div className="relative z-10 h-full flex items-center justify-center px-6 py-15">
           <div className="max-w-4xl text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               Why Choose Us
@@ -148,11 +148,13 @@ const WhyUs = () => {
 
           {/* Image Placeholder */}
           <div className="mb-16 rounded-2xl overflow-hidden shadow-2xl">
-            <div className="h-[300px] md:h-[400px] bg-linear-to-br from-gray-300 to-gray-500 flex items-center justify-center">
-              <span className="text-white text-xl font-semibold">
-                Business Image
-              </span>
-            </div>
+          <Image
+            src="/Hero_Two.jpeg"
+            alt="sotabImage"
+            width={1200}
+            height={800}
+            className="object-cover w-full h-[250px] md:h-[300px] lg:h-[400px] "
+          />
           </div>
 
           {/* Core Values Cards */}

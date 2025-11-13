@@ -88,7 +88,7 @@ const Services = () => {
       >
         <div
           className="absolute inset-0"
-          style={{ backgroundColor: "rgba(0, 0, 0, 0.8)" }}
+          style={{ backgroundColor: "rgba(40, 43, 83, 0.75)" }}
         />
         <div className="relative z-10 text-center px-6">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
@@ -197,13 +197,13 @@ const Services = () => {
       <div className="bg-gray-900 py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <Image
-                  src="/business.jpg"
-                  alt="sotabImage"
-                  width={1200}
-                  height={800}
-                  className="object-cover w-full h-[250px] md:h-[300px] lg:h-[400px] "
-                />
+            <Image
+              src="/business.jpg"
+              alt="sotabImage"
+              width={1200}
+              height={800}
+              className="object-cover w-full h-[250px] md:h-[300px] lg:h-[400px] "
+            />
 
             <div className="text-white">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -220,16 +220,6 @@ const Services = () => {
                 intermediary service providers and connecting investors with
                 opportunities.
               </p>
-
-              <a href="/contact">
-                <button
-                  className="text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-xl flex items-center gap-2"
-                  style={{ backgroundColor: "#771933" }}
-                >
-                  <span>GET STARTED</span>
-                  <span>→</span>
-                </button>
-              </a>
             </div>
           </div>
         </div>
