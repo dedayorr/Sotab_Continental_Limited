@@ -9,6 +9,7 @@ import {
   CheckCircle,
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const AboutUs = () => {
   const services = [
@@ -79,18 +80,12 @@ const AboutUs = () => {
         </div>
       </div>
 
-      {/* Main Content Section */}
+ 
       <div className="bg-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
-          {/* Image and Intro Section */}
+      
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
-            {/* <div className="relative h-[400px] lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
-              <div className="absolute inset-0 bg-linear-to-br from-gray-400 to-gray-600 flex items-center justify-center">
-                <span className="text-white text-xl font-semibold">
-                  Team Image
-                </span>
-              </div>
-            </div> */}
+        
 
             <div>
               <h2
@@ -124,14 +119,14 @@ const AboutUs = () => {
                 </p>
               </div>
 
-              <a href="/contact">
+              <Link href="/pages/contact-us">
                 <button
                   className="mt-8 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-xl"
                   style={{ backgroundColor: "#771933" }}
                 >
                   Contact Us Today
                 </button>
-              </a>
+              </Link>
             </div>
           </div>
 
