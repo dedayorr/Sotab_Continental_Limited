@@ -88,10 +88,7 @@ function ContactUs() {
     {
       icon: <Clock className="w-6 h-6" />,
       title: "Business Hours",
-      details: [
-        "Monday - Friday: 8:00 AM - 6:00 PM",
-        "Saturday: 9:00 AM - 2:00 PM",
-      ],
+      details: ["Monday - Friday: 9:00 AM - 4:00 PM"],
       color: "#1f3693",
     },
   ];

@@ -6,7 +6,6 @@ import Image from "next/image";
 import {
   FaBlog,
   FaCogs,
-
   FaInfoCircle,
   FaInstagram,
   FaLinkedin,
@@ -25,8 +24,8 @@ function Header() {
       setScrolled(window.scrollY > 0);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const openSideBar = () => {
@@ -38,9 +37,11 @@ function Header() {
   };
   return (
     <>
-      <div className={`z-50 flex justify-between items-center bg-white h-[70px] md:h-20 px-[5%] lg:h-20 sticky top-0 transition-shadow duration-300 ${
-        scrolled ? 'shadow-lg' : ''
-      }`}>
+      <div
+        className={`z-50 flex justify-between items-center bg-white h-[70px] md:h-20 px-[5%] lg:h-20 sticky top-0 transition-shadow duration-300 ${
+          scrolled ? "shadow-lg" : ""
+        }`}
+      >
         <Link href="/">
           {" "}
           <Image
@@ -62,6 +63,14 @@ function Header() {
 
         {/* -=======Desktop Menu======== */}
         <ul className=" hidden text-black md:flex md:gap-6 lg:gap-9 lg:text-[16px]">
+          <li className="flex items-center ">
+            <Link
+              href="/"
+              className="hover:scale-110 hover:text-[#3C467B] transition-transform duration-200 inline-block"
+            >
+              Home
+            </Link>
+          </li>
           <li className="flex items-center ">
             <Link
               href="/pages/aboutUs"
