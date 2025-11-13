@@ -15,6 +15,11 @@ export const metadata: Metadata = {
   title: "Sotab Continental Limited",
   description:
     "A Nigerian-based real estate and energy solutions company redefining development through innovation, sustainability, and community driven impact.",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({
@@ -25,15 +30,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Additional meta tags if needed */}
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="ahrefs-site-verification"
           content="c1ec4ef60bda707abaa1bd1fcab702e10b63649c9c9f05059c249889705576a8"
         />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://gailymaids.com/" />
-        {/* <meta name="twitter:site" content="@your_twitter_handle" /> */}
       </head>
       <body className={`${inter.className} antialiased`}>
         <Header />
