@@ -7,6 +7,7 @@ import Why from "./content/why-Us/Why";
 import Dedication from "./content/dedication/Dedication";
 import Forward from "./content/looking-forward/Forward";
 import LastSection from "./content/last-section/LastSection";
+import FloatingAdvertSystem from "./content/floatingAdvertSystem/FloatingAdvert";
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ export default function Home() {
       <LastSection />
       <Dedication />
       <Forward />
-      
+      {/* <FloatingAdvertSystem /> */}
     </main>
   );
 }

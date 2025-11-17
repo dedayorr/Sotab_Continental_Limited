@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "./header/Header";
 import Footer from "./footer/Footer";
+import FloatingAdvertSystem from "./content/floatingAdvertSystem/FloatingAdvert";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -40,6 +41,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <FloatingAdvertSystem />
       </body>
     </html>
   );
