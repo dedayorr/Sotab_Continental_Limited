@@ -168,12 +168,12 @@ function FloatingAdvertSystem() {
                 priority
               />
 
-              <div className="absolute top-4 left-4 bg-linear-to-r from-[#771933] to-[#1f3693] text-white px-6 py-3 rounded-full shadow-xl flex items-center gap-2 animate-pulse">
+              {/* <div className="absolute top-4 left-4 bg-linear-to-r from-[#771933] to-[#1f3693] text-white px-6 py-3 rounded-full shadow-xl flex items-center gap-2 animate-pulse">
                 <Sparkles className="w-5 h-5" />
                 <span className="font-bold text-sm uppercase tracking-wide">
                   Limited Offer
                 </span>
-              </div>
+              </div> */}
             </div>
 
             <div className="bg-linear-to-r from-[#282b53] via-[#1f3693] to-[#771933] p-6">
@@ -189,13 +189,13 @@ function FloatingAdvertSystem() {
 
                 <div className="flex gap-3">
                   <Link href="tel:07047155693">
-                    <button className="bg-white hover:bg-gray-100 text-[#1f3693] px-6 py-3 rounded-full font-bold transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center gap-2">
+                    <button className="bg-white hover:bg-gray-100 text-[#1f3693] px-5 py-2 rounded-full font-bold transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center gap-2">
                       <Phone className="w-4 h-4" />
                       07047155693
                     </button>
                   </Link>
                   <Link href="tel:08104542063">
-                    <button className="bg-white hover:bg-gray-100 text-[#1f3693] px-6 py-3 rounded-full font-bold transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center gap-2">
+                    <button className="bg-white hover:bg-gray-100 text-[#1f3693] px-5 py-2 rounded-full font-bold transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center gap-2">
                       <Phone className="w-4 h-4" />
                       08104542063
                     </button>
