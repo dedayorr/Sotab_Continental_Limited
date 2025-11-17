@@ -187,7 +187,7 @@ function FloatingAdvertSystem() {
                   </p>
                 </div>
 
-                <div className="flex gap-3">
+                <div className="flex flex-col md:flex-row gap-3">
                   <Link href="tel:07047155693">
                     <button className="bg-white hover:bg-gray-100 text-[#1f3693] px-5 py-2 rounded-full font-bold transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center gap-2">
                       <Phone className="w-4 h-4" />
