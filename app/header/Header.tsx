@@ -111,6 +111,14 @@ function Header() {
               Contact
             </Link>
           </li>
+          <li className="flex items-center">
+            <Link
+              href="/pages/gallery"
+              className="hover:scale-125 hover:text-[#3C467B] transition-transform duration-200 inline-block"
+            >
+              Gallery
+            </Link>
+          </li>
         </ul>
         <div className="items-center gap-5 hidden md:flex text-[25px] text-[#282b53]">
           <a
@@ -204,6 +212,15 @@ function Header() {
                 <MdOutlineContactPhone />
                 <p className="" onClick={closeSideBAr}>
                   Contact
+                </p>
+              </Link>
+              <Link
+                href="/pages/gallery"
+                className="flex items-center gap-[15px]"
+              >
+                <MdOutlineContactPhone />
+                <p className="" onClick={closeSideBAr}>
+                  Gallery
                 </p>
               </Link>
             </div>
