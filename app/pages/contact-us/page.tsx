@@ -12,6 +12,7 @@ import {
   Building2,
   CheckCircle,
 } from "lucide-react";
+import Link from "next/link";
 
 function ContactUs() {
   const [formData, setFormData] = useState({
@@ -54,7 +55,7 @@ function ContactUs() {
   const offices = [
     {
       title: "Head Office - Lagos",
-      address: "Plot 123, Victoria Island, Lagos, Nigeria",
+      address: "70b kusenla road ikate",
       icon: <Building2 className="w-6 h-6" />,
       color: "#771933",
     },
@@ -436,13 +437,15 @@ function ContactUs() {
             property goals.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button
+            <Link
+              href="/pages/contact-us"
               className="px-8 py-4 bg-white rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl"
               style={{ color: "#771933" }}
             >
               Schedule a Consultation
-            </button>
-            <button
+            </Link>
+            <Link
+              href="/pages/gallery"
               className="px-8 py-4 border-2 border-white text-white rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 hover:bg-white"
               onMouseEnter={(e) => {
                 e.currentTarget.style.color = "#771933";
@@ -452,7 +455,7 @@ function ContactUs() {
               }}
             >
               View Our Projects
-            </button>
+            </Link>
           </div>
         </div>
       </div>
