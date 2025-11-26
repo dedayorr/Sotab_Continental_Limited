@@ -59,18 +59,6 @@ function ContactUs() {
       icon: <Building2 className="w-6 h-6" />,
       color: "#771933",
     },
-    // {
-    //   title: "Regional Office - Abuja",
-    //   address: "Suite 45, Central Business District, Abuja, Nigeria",
-    //   icon: <Building2 className="w-6 h-6" />,
-    //   color: "#282b53",
-    // },
-    // {
-    //   title: "Branch Office - Port Harcourt",
-    //   address: "15 Trans-Amadi Industrial Layout, Port Harcourt, Nigeria",
-    //   icon: <Building2 className="w-6 h-6" />,
-    //   color: "#1f3693",
-    // },
   ];
 
   const contactMethods = [
